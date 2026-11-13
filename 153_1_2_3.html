@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 3: Listening and Speaking - Page 153 (Exercises 1, 2 & 3)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Fredoka, Patrick Hand & Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Fredoka:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Fredoka', 'Cairo', sans-serif;
+            background-color: #f6fbf9;
+            background-image: 
+                radial-gradient(#bbf7d0 1.2px, transparent 1.2px), 
+                radial-gradient(#fde68a 1.2px, #f6fbf9 1.2px);
+            background-size: 32px 32px;
+            background-position: 0 0, 16px 16px;
+            overflow-x: hidden;
+        }
+
+        .en-font {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        .ar-font {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .handwriting-font {
+            font-family: 'Patrick Hand', 'Fredoka', cursive, sans-serif;
+        }
+
+        /* التظليل الجذاب الثابت عند القراءة (بدون حركة أو اهتزاز) */
+        .static-attractive-highlight {
+            background: linear-gradient(180deg, #dcfce7 0%, #86efac 100%) !important;
+            border-color: #059669 !important;
+            box-shadow: 0 4px 0 #059669, 0 0 0 3.5px #34d399 !important;
+            color: #064e3b !important;
+        }
+
+        /* الجدول الوردي في التمرين الأول */
+        .girls-pink-table {
+            border: 3px solid #e11d74;
+            border-radius: 22px;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 6px 0 #be185d;
+        }
+
+        .check-cell-btn {
+            width: 100%;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.45rem;
+            cursor: pointer;
+            transition: background-color 0.15s ease, color 0.15s ease;
+            user-select: none;
+        }
+        .check-cell-btn:hover {
+            background-color: #fdf2f8;
+        }
+        .check-cell-btn.checked-correct {
+            background-color: #dcfce7 !important;
+            color: #047857 !important;
+        }
+        .check-cell-btn.checked-wrong {
+            background-color: #ffe4e6 !important;
+            color: #e11d48 !important;
+        }
+
+        /* شرائح صندوق الكلمات */
+        .word-bank-chip {
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease;
+        }
+        .word-bank-chip:hover {
+            background-color: #ccfbf1;
+            border-color: #0d9488;
+        }
+        .word-bank-chip.selected {
+            background-color: #0d9488 !important;
+            color: #ffffff !important;
+            border-color: #0f766e !important;
+            box-shadow: 0 0 0 3px #99f6e4 !important;
+        }
+        .word-bank-chip.used {
+            opacity: 0.35;
+            pointer-events: none;
+            text-decoration: line-through;
+        }
+
+        /* فراغات الإكمال في التمرين الثاني */
+        .drop-target {
+            min-width: 125px;
+            min-height: 36px;
+            border-bottom: 3px solid #475569;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 14px;
+            cursor: pointer;
+            background: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 900;
+            color: #0284c7;
+            transition: all 0.2s ease;
+            vertical-align: middle;
+        }
+        .drop-target:hover {
+            background: #e0f2fe;
+            border-color: #0284c7;
+        }
+        .drop-target.correct {
+            border: 2.5px solid #059669;
+            background: #dcfce7;
+            color: #065f46;
+        }
+        .drop-target.wrong {
+            border: 2.5px solid #ef4444;
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        /* ورقة الملاحظات الصفراء الكريمية في التمرين الثاني كما في الكتاب */
+        .notes-paper-card {
+            background: linear-gradient(90deg, #f5f3e4 0%, #faf8ec 50%, #fdfcf5 100%);
+            border: 2.5px solid #e2dccb;
+            border-radius: 24px 24px 10px 10px;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1), 0 4px 0 #d6d1c0;
+            position: relative;
+        }
+
+        .note-line-row {
+            border: 2px solid rgba(203, 213, 225, 0.7);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.82);
+            padding: 10px 16px;
+            transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .note-line-row.solved {
+            border-color: #10b981;
+            background: rgba(240, 253, 244, 0.92);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between text-slate-800">
+
+    <!-- الشريط العلوي -->
+    <nav class="bg-white/95 backdrop-blur-md border-b-2 border-emerald-200 sticky top-0 z-40 px-3 sm:px-4 py-2.5 shadow-sm">
+        <div class="max-w-6xl mx-auto flex items-center justify-center sm:justify-between gap-2 flex-wrap">
+            <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-teal-600 animate-pulse"></span>
+                <span class="font-black text-teal-900 text-sm sm:text-base">Unit 3: Stories • Listening &amp; Speaking (Page 153)</span>
+            </div>
+
+            <div class="flex items-center gap-2 flex-wrap justify-center">
+                <!-- زر تبديل السرعة -->
+                <button onclick="toggleSpeechRate()" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-xl text-xs sm:text-sm font-bold text-slate-700 flex items-center gap-1.5 transition">
+                    <i class="fa-solid fa-gauge-high text-teal-600"></i>
+                    <span id="speedDisplay">هادئ وتعليمي (0.78x)</span>
+                </button>
+
+                <!-- زر إظهار الحلول الكاملة -->
+                <button onclick="toggleAllPageAnswers()" id="showAllAnswersBtn" class="px-3.5 py-1.5 bg-amber-500 hover:bg-amber-600 text-white rounded-xl text-xs sm:text-sm font-black shadow flex items-center gap-1.5 transition active:scale-95">
+                    <i class="fa-solid fa-key"></i>
+                    <span>إظهار جميع الحلول</span>
+                </button>
+
+                <!-- زر حفظ الملف بالصور والصوت دائماً -->
+                <button id="saveHtmlWithMediaBtn" onclick="downloadPageWithSavedMedia()" class="hidden px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs sm:text-sm font-black shadow flex items-center gap-1.5 transition active:scale-95">
+                    <i class="fa-solid fa-floppy-disk text-amber-300"></i>
+                    <span class="ar-font">حفظ الملف بالصور والصوت دائماً</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- المحتوى الرئيسي لصفحة 153 -->
+    <main class="max-w-6xl w-full mx-auto px-3 sm:px-4 py-5 flex-grow">
+
+        <!-- ترويسة الصفحة: الكائن الأزرق الدائري اللطيف + شريط Listening and Speaking الأخضر الداكن كما في أعلى صفحة 153 -->
+        <header class="relative mb-6 text-center select-none flex flex-col items-center justify-center">
+            <div class="relative inline-flex items-center justify-center mb-2">
+                <!-- الكائن الأزرق الدائري اللطيف كما في أعلى صفحة 153 -->
+                <div class="w-16 h-16 sm:w-20 sm:h-20 -mr-3 z-10 drop-shadow-md">
+                    <svg viewBox="0 0 100 100" class="w-full h-full">
+                        <circle cx="50" cy="54" r="32" fill="#0ea5e9" stroke="#0369a1" stroke-width="3"/>
+                        <ellipse cx="42" cy="44" rx="16" ry="11" fill="#38bdf8" opacity="0.55"/>
+                        <circle cx="40" cy="44" r="6.5" fill="#ffffff" stroke="#0369a1" stroke-width="1.5"/>
+                        <circle cx="41" cy="44" r="3.2" fill="#0f172a"/>
+                        <circle cx="60" cy="44" r="6.5" fill="#ffffff" stroke="#0369a1" stroke-width="1.5"/>
+                        <circle cx="59" cy="44" r="3.2" fill="#0f172a"/>
+                        <path d="M43 58 Q50 65 57 58" stroke="#0f172a" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <ellipse cx="16" cy="50" rx="6" ry="4" fill="#38bdf8" stroke="#0369a1" stroke-width="2"/>
+                        <ellipse cx="84" cy="50" rx="6" ry="4" fill="#38bdf8" stroke="#0369a1" stroke-width="2"/>
+                        <ellipse cx="38" cy="86" rx="7" ry="4" fill="#0284c7"/>
+                        <ellipse cx="62" cy="86" rx="7" ry="4" fill="#0284c7"/>
+                    </svg>
+                </div>
+                <!-- شريط Listening and Speaking الأخضر الداكن كما في الكتاب -->
+                <div class="bg-[#1b7a6e] text-white px-7 sm:px-9 py-2.5 rounded-3xl font-black text-xl sm:text-4xl shadow-lg border-b-4 border-[#115e59] flex items-center justify-center gap-3">
+                    <span>Listening and Speaking</span>
+                </div>
+            </div>
+
+            <div class="inline-flex items-center justify-center gap-2 bg-teal-800 text-white px-6 py-1.5 rounded-2xl font-black text-base sm:text-xl shadow border-2 border-teal-950">
+                <span>🎧</span>
+                <span>Unit 3: Stories • Good Day or Bad Day at School</span>
+                <span>🏫</span>
+            </div>
+
+            <!-- روابط سريعة للتمارين الثلاثة -->
+            <div class="flex items-center justify-center gap-2.5 mt-3 flex-wrap">
+                <a href="#ex1-section" class="bg-white hover:bg-teal-50 text-teal-900 border-2 border-teal-600 px-3.5 py-1 rounded-full text-xs sm:text-sm font-black shadow-2xs transition">
+                    1. Listen &amp; Check (✓)
+                </a>
+                <a href="#ex2-section" class="bg-white hover:bg-teal-50 text-teal-900 border-2 border-teal-600 px-3.5 py-1 rounded-full text-xs sm:text-sm font-black shadow-2xs transition">
+                    2. Complete the Notes (1-8)
+                </a>
+                <a href="#ex3-section" class="bg-white hover:bg-teal-50 text-teal-900 border-2 border-teal-600 px-3.5 py-1 rounded-full text-xs sm:text-sm font-black shadow-2xs transition">
+                    3. Answer About Your Day
+                </a>
+            </div>
+        </header>
+
+        <!-- ======================================================================= -->
+        <!-- EXERCISE 1: Listen and check (✓) (Wafa, Nouf, Aisha, Khadija, Asma)     -->
+        <!-- ======================================================================= -->
+        <section id="ex1-section" class="mb-8 bg-white rounded-3xl p-4 sm:p-6 border-3 border-teal-600 shadow-xl">
+            <div class="flex flex-col items-center justify-center text-center gap-2.5 mb-5 pb-3 border-b-2 border-slate-100">
+                <div class="flex flex-wrap items-center justify-center gap-2.5">
+                    <span class="w-8 h-8 rounded-full bg-teal-700 text-white font-black text-lg flex items-center justify-center shadow-sm">1</span>
+                    <span class="px-2.5 py-1 rounded-full bg-teal-100 text-teal-800 font-black text-xs flex items-center gap-1 border border-teal-300">
+                        <i class="fa-solid fa-headphones"></i> 3.1
+                    </span>
+                    <h2 class="text-lg sm:text-2xl font-black text-slate-900">
+                        Listen and check (<span class="text-pink-600">✓</span>).
+                    </h2>
+                </div>
+                <p dir="rtl" class="ar-font text-xs sm:text-sm font-extrabold text-teal-700 bg-teal-50 px-3.5 py-1 rounded-full border border-teal-200">
+                    انظر إلى جدول الطالبات وضع علامة (✓) أمام (Good day) أو (Bad day) • (تُقرأ الجملة بصوت واحد ثابت بعد الإجابة مع ظهور الترجمة العربية)
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-1">
+                    <!-- زر رفع صوت خارجي للتمرين 1 -->
+                    <label for="upload-audio-ex1" class="cursor-pointer px-3.5 py-1.5 bg-gradient-to-r from-pink-600 to-rose-500 hover:from-pink-700 hover:to-rose-600 text-white font-black text-xs sm:text-sm rounded-xl shadow flex items-center gap-1.5 transition active:scale-95">
+                        <i class="fa-solid fa-file-audio"></i>
+                        <span class="ar-font">إضافة صوت (يعمل تلقائياً) 🎵</span>
+                    </label>
+                    <input type="file" id="upload-audio-ex1" accept="audio/*" class="hidden" onchange="handleAudioUpload(event, 'ex1')" />
+
+                    <div id="custom-audio-box-ex1" class="hidden items-center gap-1.5 bg-pink-50 border-2 border-pink-300 px-2.5 py-1 rounded-xl">
+                        <audio id="custom-audio-player-ex1" controls autoplay class="h-8 w-44 sm:w-56"></audio>
+                        <button onclick="removeCustomAudio('ex1')" class="w-7 h-7 rounded-lg bg-rose-100 hover:bg-rose-200 text-rose-700 flex items-center justify-center text-xs transition" title="حذف الصوت">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+
+                    <span id="ex1ScoreBadge" class="bg-emerald-50 text-emerald-800 border border-emerald-300 px-3 py-1 rounded-xl font-black text-xs">
+                        النتيجة: 0 / 5 ⭐
+                    </span>
+                    <button onclick="revealEx1Answers()" class="px-3 py-1 bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold text-xs rounded-xl border border-amber-300 transition">
+                        إظهار إجابات التمرين 1 👁️
+                    </button>
+                    <button onclick="resetEx1Answers()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-xl border border-slate-300 transition">
+                        إعادة التمرين 1 🔄
+                    </button>
+                </div>
+            </div>
+
+            <!-- الجدول الوردي للطالبات الخمس كما في الكتاب المدرسي -->
+            <div class="max-w-4xl mx-auto overflow-x-auto">
+                <div id="ex1TableContainer" class="girls-pink-table min-w-[600px]">
+                    <!-- يتم توليده برمجياً -->
+                </div>
+
+                <!-- شريط الترجمة باللغة العربية أسفل جدول التمرين الأول -->
+                <div id="ex1TranslationBar" dir="rtl" class="mt-4 ar-font text-base sm:text-xl font-black text-slate-500 bg-slate-100 border-2 border-slate-200 px-4 py-2.5 rounded-2xl text-center transition">
+                    الترجمة: (ضع علامة ✓ أمام Good day أو Bad day لأي طالبة لسماع الجملة وظهور ترجمتها باللغة العربية هنا)
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================= -->
+        <!-- EXERCISE 2: Listen again and complete the notes (1 to 8)                -->
+        <!-- ======================================================================= -->
+        <section id="ex2-section" class="mb-8 bg-white rounded-3xl p-4 sm:p-6 border-3 border-teal-600 shadow-xl">
+            <div class="flex flex-col items-center justify-center text-center gap-2.5 mb-5 pb-3 border-b-2 border-slate-100">
+                <div class="flex flex-wrap items-center justify-center gap-2.5">
+                    <span class="w-8 h-8 rounded-full bg-teal-700 text-white font-black text-lg flex items-center justify-center shadow-sm">2</span>
+                    <span class="px-2.5 py-1 rounded-full bg-teal-100 text-teal-800 font-black text-xs flex items-center gap-1 border border-teal-300">
+                        <i class="fa-solid fa-headphones"></i> 3.2
+                    </span>
+                    <h2 class="text-lg sm:text-2xl font-black text-slate-900">
+                        Listen again and complete the notes.
+                    </h2>
+                </div>
+                <p dir="rtl" class="ar-font text-xs sm:text-sm font-extrabold text-teal-700 bg-teal-50 px-3.5 py-1 rounded-full border border-teal-200">
+                    اختر الكلمة المناسبة من الصندوق لإكمال الملاحظات (١ إلى ٨) • (لا تُقرأ الجملة إلا بعد الإجابة مع تظليل ثابت وظهور الترجمة العربية أسفلها)
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-1">
+                    <!-- زر رفع صوت خارجي للتمرين 2 -->
+                    <label for="upload-audio-ex2" class="cursor-pointer px-3.5 py-1.5 bg-gradient-to-r from-pink-600 to-rose-500 hover:from-pink-700 hover:to-rose-600 text-white font-black text-xs sm:text-sm rounded-xl shadow flex items-center gap-1.5 transition active:scale-95">
+                        <i class="fa-solid fa-file-audio"></i>
+                        <span class="ar-font">إضافة صوت (يعمل تلقائياً) 🎵</span>
+                    </label>
+                    <input type="file" id="upload-audio-ex2" accept="audio/*" class="hidden" onchange="handleAudioUpload(event, 'ex2')" />
+
+                    <div id="custom-audio-box-ex2" class="hidden items-center gap-1.5 bg-pink-50 border-2 border-pink-300 px-2.5 py-1 rounded-xl">
+                        <audio id="custom-audio-player-ex2" controls autoplay class="h-8 w-44 sm:w-56"></audio>
+                        <button onclick="removeCustomAudio('ex2')" class="w-7 h-7 rounded-lg bg-rose-100 hover:bg-rose-200 text-rose-700 flex items-center justify-center text-xs transition" title="حذف الصوت">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+
+                    <span id="ex2ScoreBadge" class="bg-emerald-50 text-emerald-800 border border-emerald-300 px-3 py-1 rounded-xl font-black text-xs">
+                        النتيجة: 0 / 8 ⭐
+                    </span>
+                    <button onclick="revealEx2Answers()" class="px-3 py-1 bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold text-xs rounded-xl border border-amber-300 transition">
+                        إظهار إجابات التمرين 2 👁️
+                    </button>
+                    <button onclick="resetEx2Answers()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-xl border border-slate-300 transition">
+                        إعادة التمرين 2 🔄
+                    </button>
+                </div>
+            </div>
+
+            <!-- صندوق الكلمات للتمرين الثاني (Word Bank 1-8) -->
+            <div class="max-w-3xl mx-auto mb-6 bg-teal-50/70 p-3.5 sm:p-4 rounded-2xl border-2 border-teal-300 shadow-xs">
+                <div class="flex items-center justify-between gap-2 mb-2.5 pb-1.5 border-b border-teal-200/70 flex-wrap">
+                    <span class="text-xs sm:text-sm font-black text-teal-900 flex items-center gap-1.5">
+                        <i class="fa-solid fa-box-open text-teal-600"></i>
+                        <span>Notes Word Bank • صندوق الكلمات (8 كلمات)</span>
+                    </span>
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="shuffleEx2Bank()" class="px-2.5 py-1 bg-white hover:bg-teal-100 text-teal-800 border border-teal-300 rounded-lg text-xs font-bold flex items-center gap-1 shadow-2xs transition active:scale-95">
+                            <i class="fa-solid fa-shuffle"></i>
+                            <span>خلط الكلمات</span>
+                        </button>
+                        <span class="ar-font text-xs font-bold text-teal-800">انقر على الكلمة ثم انقر على الفراغ</span>
+                    </div>
+                </div>
+                <div id="ex2WordBankList" class="flex flex-wrap items-center justify-center gap-2.5 py-1">
+                    <!-- تُولد الكلمات برمجياً -->
+                </div>
+            </div>
+
+            <!-- ورقة الملاحظات الصفراء الكريمية للجمل الثماني كما في الكتاب -->
+            <div class="max-w-4xl mx-auto">
+                <div class="notes-paper-card p-4 sm:p-7">
+                    <div id="ex2NotesList" class="flex flex-col gap-3">
+                        <!-- يتم توليد الجمل 1-8 برمجياً -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================= -->
+        <!-- EXERCISE 3: Answer the questions about your day (1 & 2)                 -->
+        <!-- ======================================================================= -->
+        <section id="ex3-section" class="mb-8 bg-white rounded-3xl p-4 sm:p-6 border-3 border-teal-600 shadow-xl">
+            <div class="flex flex-col items-center justify-center text-center gap-2 mb-6 pb-3 border-b-2 border-slate-100">
+                <div class="flex flex-wrap items-center justify-center gap-2.5">
+                    <span class="w-8 h-8 rounded-full bg-teal-700 text-white font-black text-lg flex items-center justify-center shadow-sm">3</span>
+                    <h2 class="text-lg sm:text-2xl font-black text-slate-900">
+                        Answer the questions about your day.
+                    </h2>
+                </div>
+                <p dir="rtl" class="ar-font text-xs sm:text-sm font-extrabold text-teal-700 bg-teal-50 px-3.5 py-1 rounded-full border border-teal-200">
+                    أجب عن السؤالين حول يومك في المدرسة بكتابة جملتك أو النقر على أحد الخيارات المقترحة لكتابة جملة واحدة وسماعها بالتظليل الثابت والترجمة العربية!
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-1">
+                    <button onclick="fillSampleEx3Answers()" class="px-3 py-1 bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold text-xs rounded-xl border border-amber-300 transition">
+                        إدراج إجابات نموذجية 💡
+                    </button>
+                    <button onclick="resetEx3Answers()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-xl border border-slate-300 transition">
+                        مسح الإجابات 🔄
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-6 max-w-4xl mx-auto">
+                <!-- Question 1: How was your day at school yesterday? -->
+                <div id="ex3-q1-box" class="p-5 sm:p-6 rounded-2xl border-2 border-slate-200 bg-slate-50/70 transition text-center flex flex-col items-center">
+                    <div class="flex flex-wrap items-center justify-center gap-3 mb-2 w-full">
+                        <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-pink-600 text-white font-black text-base sm:text-lg flex items-center justify-center shadow-xs flex-shrink-0">1</span>
+                        <h3 class="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 en-font text-center">
+                            How was your day at school yesterday?
+                        </h3>
+                        <button type="button" onclick="speakEx3Answer(1)" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm sm:text-base flex items-center gap-2 shadow-xs transition active:scale-95">
+                            <i class="fa-solid fa-volume-high"></i>
+                            <span class="ar-font">اقرأ إجابتي</span>
+                        </button>
+                    </div>
+                    <p dir="rtl" class="ar-font text-sm sm:text-base md:text-lg font-extrabold text-slate-600 mb-3.5 text-center">
+                        كيف كان يومك في المدرسة أمس؟ (اختر إجابة لتكوين جملة واحدة أو اكتب إجابتك):
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center gap-2 mb-4 w-full">
+                        <span class="text-sm sm:text-base font-black text-teal-800 mr-1">Choose One:</span>
+                        <button type="button" onclick="setEx3SingleSentence(1, 'My day at school was great yesterday!')" class="px-3.5 py-1.5 bg-white hover:bg-teal-50 text-sky-700 border-2 border-sky-200 rounded-full text-sm sm:text-base font-extrabold transition shadow-2xs">My day at school was great yesterday!</button>
+                        <button type="button" onclick="setEx3SingleSentence(1, 'It was a very good day!')" class="px-3.5 py-1.5 bg-white hover:bg-teal-50 text-sky-700 border-2 border-sky-200 rounded-full text-sm sm:text-base font-extrabold transition shadow-2xs">It was a very good day!</button>
+                        <button type="button" onclick="setEx3SingleSentence(1, 'My day was good fun.')" class="px-3.5 py-1.5 bg-white hover:bg-teal-50 text-sky-700 border-2 border-sky-200 rounded-full text-sm sm:text-base font-extrabold transition shadow-2xs">My day was good fun.</button>
+                    </div>
+
+                    <textarea
+                        id="ex3-input-1"
+                        rows="1"
+                        oninput="updateEx3Translation(1)"
+                        class="w-full bg-white border-b-3 border-2 border-teal-400 focus:border-teal-700 rounded-2xl px-4 py-3 en-font font-black text-xl sm:text-2xl text-teal-900 text-center outline-none shadow-inner transition resize-none leading-relaxed"
+                    ></textarea>
+
+                    <!-- الترجمة باللغة العربية أسفل الإطار مباشرة -->
+                    <div id="ex3-ar-1" dir="rtl" class="w-full ar-font text-base sm:text-xl font-black text-slate-500 bg-slate-100 border-2 border-slate-200 px-5 py-2.5 rounded-2xl mt-3 text-center transition">
+                        الترجمة: (اختر من الأزرار أعلاه أو اكتب جملتك لتظهر ترجمتها باللغة العربية هنا)
+                    </div>
+                </div>
+
+                <!-- Question 2: What happened in your class yesterday? -->
+                <div id="ex3-q2-box" class="p-5 sm:p-6 rounded-2xl border-2 border-slate-200 bg-slate-50/70 transition text-center flex flex-col items-center">
+                    <div class="flex flex-wrap items-center justify-center gap-3 mb-2 w-full">
+                        <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-pink-600 text-white font-black text-base sm:text-lg flex items-center justify-center shadow-xs flex-shrink-0">2</span>
+                        <h3 class="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 en-font text-center">
+                            What happened in your class yesterday?
+                        </h3>
+                        <button type="button" onclick="speakEx3Answer(2)" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm sm:text-base flex items-center gap-2 shadow-xs transition active:scale-95">
+                            <i class="fa-solid fa-volume-high"></i>
+                            <span class="ar-font">اقرأ إجابتي</span>
+                        </button>
+                    </div>
+                    <p dir="rtl" class="ar-font text-sm sm:text-base md:text-lg font-extrabold text-slate-600 mb-3.5 text-center">
+                        ماذا حدث في فصلك أمس؟ (اختر حدثاً لتكوين جملة واحدة أو اكتب إجابتك):
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center gap-2 mb-4 w-full">
+                        <span class="text-sm sm:text-base font-black text-rose-800 mr-1">Choose One:</span>
+                        <button type="button" onclick="setEx3SingleSentence(2, 'We did our projects, and the teacher liked my homework.')" class="px-3.5 py-1.5 bg-white hover:bg-rose-50 text-rose-700 border-2 border-rose-200 rounded-full text-sm sm:text-base font-extrabold transition shadow-2xs">We did our projects</button>
+                        <button type="button" onclick="setEx3SingleSentence(2, 'We read a funny story and laughed a lot in class.')" class="px-3.5 py-1.5 bg-white hover:bg-rose-50 text-rose-700 border-2 border-rose-200 rounded-full text-sm sm:text-base font-extrabold transition shadow-2xs">We read a funny story and laughed</button>
+                        <button type="button" onclick="setEx3SingleSentence(2, 'I helped my teacher carry the books into the classroom.')" class="px-3.5 py-1.5 bg-white hover:bg-rose-50 text-rose-700 border-2 border-rose-200 rounded-full text-sm sm:text-base font-extrabold transition shadow-2xs">I helped carry the books</button>
+                    </div>
+
+                    <textarea
+                        id="ex3-input-2"
+                        rows="1"
+                        oninput="updateEx3Translation(2)"
+                        class="w-full bg-white border-b-3 border-2 border-teal-400 focus:border-teal-700 rounded-2xl px-4 py-3 en-font font-black text-xl sm:text-2xl text-teal-900 text-center outline-none shadow-inner transition resize-none leading-relaxed"
+                    ></textarea>
+
+                    <!-- الترجمة باللغة العربية أسفل الإطار مباشرة -->
+                    <div id="ex3-ar-2" dir="rtl" class="w-full ar-font text-base sm:text-xl font-black text-slate-500 bg-slate-100 border-2 border-slate-200 px-5 py-2.5 rounded-2xl mt-3 text-center transition">
+                        الترجمة: (اختر من الأزرار أعلاه أو اكتب جملتك لتظهر ترجمتها باللغة العربية هنا)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- شارة رقم الصفحة 153 أسفل التمرين (في المنتصف تماماً) -->
+        <div class="mt-8 mb-4 flex items-center justify-center">
+            <div class="relative group select-none">
+                <div class="absolute -inset-1.5 bg-gradient-to-r from-teal-400 via-amber-400 to-pink-500 rounded-3xl blur-md opacity-70"></div>
+                <div class="relative bg-gradient-to-b from-white to-amber-50/90 border-3 border-teal-600 rounded-2xl px-6 py-2.5 sm:px-8 sm:py-3 shadow-lg flex items-center justify-center gap-3 sm:gap-4">
+                    <div class="w-11 h-11 sm:w-13 sm:h-13 rounded-xl bg-gradient-to-br from-pink-500 via-rose-500 to-pink-600 text-white flex items-center justify-center font-black text-xl sm:text-2xl shadow-md border-2 border-white">
+                        3
+                    </div>
+                    <div class="text-center leading-tight flex flex-col items-center justify-center">
+                        <span class="en-font font-black text-lg sm:text-xl text-teal-800 tracking-wide block text-center">
+                            PAGE <span class="text-rose-500">153</span>
+                        </span>
+                        <span dir="rtl" class="text-xs sm:text-sm font-bold text-amber-700 ar-font block text-center">
+                            📖 صفحة ١٥٣ • الاستماع والتحدث (التمارين ١، ٢، ٣)
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- التنبيه الصوتي الحي -->
+    <div id="liveReadingToast" class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 backdrop-blur-md text-white px-5 py-2.5 rounded-2xl shadow-2xl border border-slate-700 flex items-center gap-3 transition-all duration-300 opacity-0 pointer-events-none translate-y-8 max-w-[94vw]">
+        <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping flex-shrink-0"></div>
+        <div class="truncate">
+            <span class="text-[11px] text-slate-400 block font-sans" id="toastSpeakerLabel">Reading calmly:</span>
+            <span id="toastWord" class="en-font font-black text-amber-300 text-base sm:text-lg tracking-wide">...</span>
+        </div>
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <footer class="bg-white/90 border-t border-emerald-200 mt-8 py-5 px-4 text-center text-xs text-slate-600">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p class="font-bold">
+                Unit 3: Stories • Listening and Speaking Page 153 (Exercises 1, 2 &amp; 3)
+            </p>
+            <div class="flex items-center gap-2">
+                <span class="bg-indigo-50 text-indigo-800 px-3 py-1 rounded-full font-bold border border-indigo-200 flex items-center gap-1.5">
+                    <i class="fa-solid fa-headset text-indigo-600"></i>
+                    <span id="footerSpeakerName">Calm English Teacher</span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // =====================================================================
+        // 1. بيانات التمرين الأول: Listen and check (✓) (5 Girls)
+        // =====================================================================
+        const ex1Girls = [
+            {
+                id: "wafa",
+                name: "Wafa",
+                correctRow: "good", // Good day
+                userChoice: null,
+                spokenSentence: "Wafa had a good day. She played the piano because she likes music.",
+                ar: "وفاء (Wafa): كان يومها جيداً (Good day) لأنها عزفت على البيانو.",
+                customImg: null,
+                svg: `<svg viewBox="0 0 160 120" class="w-full h-full object-cover">
+                    <rect width="160" height="120" fill="#e2e8f0"/>
+                    <path d="M45 45 Q80 12 115 45 L118 115 L42 115 Z" fill="#451a03"/>
+                    <circle cx="80" cy="52" r="24" fill="#fed7aa"/>
+                    <circle cx="72" cy="48" r="2.8" fill="#1e293b"/>
+                    <circle cx="88" cy="48" r="2.8" fill="#1e293b"/>
+                    <path d="M72 60 Q80 68 88 60" stroke="#7c2d12" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <rect x="48" y="80" width="64" height="40" rx="10" fill="#a855f7"/>
+                </svg>`
+            },
+            {
+                id: "nouf",
+                name: "Nouf",
+                correctRow: "bad", // Bad day
+                userChoice: null,
+                spokenSentence: "Nouf had a bad day. She dropped the teacher's books.",
+                ar: "نوف (Nouf): كان يومها سيئاً (Bad day) لأنها أسقطت كتب المعلمة.",
+                customImg: null,
+                svg: `<svg viewBox="0 0 160 120" class="w-full h-full object-cover">
+                    <rect width="160" height="120" fill="#f1f5f9"/>
+                    <path d="M46 42 Q80 10 114 42 L116 115 L44 115 Z" fill="#1e293b"/>
+                    <circle cx="80" cy="52" r="24" fill="#d97742"/>
+                    <circle cx="72" cy="48" r="2.8" fill="#1e293b"/>
+                    <circle cx="88" cy="48" r="2.8" fill="#1e293b"/>
+                    <circle cx="80" cy="60" r="3" fill="#7c2d12"/>
+                    <rect x="48" y="80" width="64" height="40" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+                </svg>`
+            },
+            {
+                id: "aisha",
+                name: "Aisha",
+                correctRow: "bad", // Bad day
+                userChoice: null,
+                spokenSentence: "Aisha had a bad day. She cried because of the sad story.",
+                ar: "عائشة (Aisha): كان يومها سيئاً (Bad day) لأنها بكت بسبب القصة.",
+                customImg: null,
+                svg: `<svg viewBox="0 0 160 120" class="w-full h-full object-cover">
+                    <rect width="160" height="120" fill="#e2e8f0"/>
+                    <path d="M48 40 Q80 12 112 40 L114 115 L46 115 Z" fill="#292524"/>
+                    <circle cx="80" cy="48" r="22" fill="#fed7aa"/>
+                    <circle cx="73" cy="45" r="2.5" fill="#1e293b"/>
+                    <circle cx="87" cy="45" r="2.5" fill="#1e293b"/>
+                    <path d="M74 57 Q80 53 86 57" stroke="#7c2d12" stroke-width="2" fill="none"/>
+                    <rect x="48" y="74" width="64" height="46" rx="10" fill="#fbcfe8"/>
+                    <rect x="64" y="80" width="32" height="36" rx="3" fill="#d97706"/>
+                </svg>`
+            },
+            {
+                id: "khadija",
+                name: "Khadija",
+                correctRow: "bad", // Bad day
+                userChoice: null,
+                spokenSentence: "Khadija had a bad day. She jumped on the chair, and the teacher was angry with her.",
+                ar: "خديجة (Khadija): كان يومها سيئاً (Bad day) لأنها قفزت على الكرسي فغضبت منها المعلمة.",
+                customImg: null,
+                svg: `<svg viewBox="0 0 160 120" class="w-full h-full object-cover">
+                    <rect width="160" height="120" fill="#f1f5f9"/>
+                    <circle cx="80" cy="48" r="23" fill="#fed7aa"/>
+                    <path d="M58 40 Q80 16 102 40 Z" fill="#78350f"/>
+                    <circle cx="72" cy="46" r="2.8" fill="#1e293b"/>
+                    <circle cx="88" cy="46" r="2.8" fill="#1e293b"/>
+                    <path d="M73 58 Q80 63 87 58" stroke="#7c2d12" stroke-width="2" fill="none"/>
+                    <rect x="48" y="76" width="64" height="44" rx="10" fill="#e2e8f0"/>
+                </svg>`
+            },
+            {
+                id: "asma",
+                name: "Asma",
+                correctRow: "good", // Good day
+                userChoice: null,
+                spokenSentence: "Asma had a good day. Her day was good fun, and the teacher liked her homework.",
+                ar: "أسماء (Asma): كان يومها جيداً وممتعاً (Good day) وأعجب المعلمة واجبها.",
+                customImg: null,
+                svg: `<svg viewBox="0 0 160 120" class="w-full h-full object-cover">
+                    <rect width="160" height="120" fill="#e2e8f0"/>
+                    <path d="M45 44 Q80 12 115 44 L118 115 L42 115 Z" fill="#451a03"/>
+                    <circle cx="80" cy="52" r="24" fill="#fed7aa"/>
+                    <circle cx="72" cy="48" r="2.8" fill="#1e293b"/>
+                    <circle cx="88" cy="48" r="2.8" fill="#1e293b"/>
+                    <path d="M72 60 Q80 68 88 60" stroke="#7c2d12" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <rect x="48" y="80" width="64" height="40" rx="10" fill="#f472b6"/>
+                </svg>`
+            }
+        ];
+
+        // =====================================================================
+        // 2. بيانات التمرين الثاني: Listen again and complete the notes (1 to 8)
+        // =====================================================================
+        const ex2NotesData = [
+            {
+                id: 1,
+                p1: "The kids were in class doing their",
+                answer: "projects",
+                altAnswers: ["projects", "homework"],
+                p2: ".",
+                ar: "كان الأطفال في الفصل يعملون على مشاريعهم (projects)."
+            },
+            {
+                id: 2,
+                p1: "Wafa",
+                answer: "played",
+                altAnswers: ["played"],
+                p2: "the piano because she likes music.",
+                ar: "عزفت (played) وفاء على البيانو لأنها تحب الموسيقى."
+            },
+            {
+                id: 3,
+                p1: "Nouf",
+                answer: "dropped",
+                altAnswers: ["dropped", "carried"],
+                p2: "the teacher's books.",
+                ar: "أسقطت (dropped) نوف كتب المعلمة."
+            },
+            {
+                id: 4,
+                p1: "Aisha",
+                answer: "cried",
+                altAnswers: ["cried"],
+                p2: "because of the story.",
+                ar: "بكت (cried) عائشة بسبب القصة."
+            },
+            {
+                id: 5,
+                p1: "Khadija",
+                answer: "jumped",
+                altAnswers: ["jumped"],
+                p2: "on the chair.",
+                ar: "قفزت (jumped) خديجة على الكرسي."
+            },
+            {
+                id: 6,
+                p1: "The teacher was",
+                answer: "angry",
+                altAnswers: ["angry"],
+                p2: "with Khadija.",
+                ar: "كانت المعلمة غاضبة (angry) من خديجة."
+            },
+            {
+                id: 7,
+                p1: "Asma's day was",
+                answer: "good fun",
+                altAnswers: ["good fun", "good", "great"],
+                p2: ".",
+                ar: "كان يوم أسماء ممتعاً وجميلاً (good fun)."
+            },
+            {
+                id: 8,
+                p1: "The teacher liked Asma's",
+                answer: "homework",
+                altAnswers: ["homework", "project", "story"],
+                p2: ".",
+                ar: "أعجب المعلمة واجب (homework) أسماء."
+            }
+        ];
+
+        let ex2BankWords = [
+            "projects", "played", "dropped", "cried", "jumped", "angry", "good fun", "homework"
+        ];
+        let selectedEx2Word = null;
+        let ex2UserAnswers = {}; // keys: 1..8
+        let showingAllAnswers = false;
+        let customAudios = { ex1: null, ex2: null };
+
+        // مفاتيح حفظ الصور والصوت في المتصفح وملف HTML
+        const STORAGE_KEY_P153_MEDIA = 'unit3_p153_saved_media_v1';
+        const IDB_NAME = 'Unit3Page153DB';
+        const IDB_STORE = 'mediaStore';
+
+        // إعدادات الصوت التعليمي الهادئ (صوت واحد أمريكي ثابت دائماً)
+        let currentSpeechRate = 0.78;
+        let activeTimeouts = [];
+        let lockedNativeVoice = null;
+        let currentAudioPlayer = null;
+        let currentSpeechSessionId = 0;
+        let utteranceGcKeeper = [];
+
+        const EXCLUDED_VOICE_KEYWORDS = [
+            'albert', 'bad news', 'bahh', 'bells', 'boing', 'bubbles', 'cellos',
+            'deranged', 'good news', 'hysterical', 'junior', 'organ', 'princess',
+            'ralph', 'superstar', 'trinoids', 'whisper', 'wobble', 'zarvox', 'fred',
+            'william', 'espeak', 'david', 'mark', 'george', 'richard', 'zira'
+        ];
+
+        function shuffleArray(arr) {
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // =====================================================================
+        // 1. دوال التمرين الأول (Listen and check ✓)
+        // =====================================================================
+        function renderEx1Table() {
+            const container = document.getElementById('ex1TableContainer');
+            if (!container) return;
+
+            container.innerHTML = `
+                <!-- صف أسماء الطالبات -->
+                <div class="grid grid-cols-6 text-center border-b-2 border-pink-500">
+                    <div class="bg-slate-50 border-r-2 border-pink-500 py-2.5 px-2 flex items-center justify-center font-black text-pink-600 text-sm">
+                        Student
+                    </div>
+                    ${ex1Girls.map((g, idx) => `
+                        <div class="bg-[#e11d74] text-white font-black text-base sm:text-xl py-2.5 px-2 ${idx < 4 ? 'border-r-2 border-pink-300/60' : ''}">
+                            ${g.name}
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- صف صور الطالبات مع أيقونة الكاميرا الصغيرة جداً -->
+                <div class="grid grid-cols-6 text-center border-b-2 border-pink-500 bg-white">
+                    <div class="bg-slate-50 border-r-2 border-pink-500 p-2 flex flex-col items-center justify-center text-xs font-bold text-slate-500">
+                        <span>Picture</span>
+                        <span class="ar-font text-[11px]">الصورة</span>
+                    </div>
+                    ${ex1Girls.map((g, idx) => `
+                        <div id="ex1-col-pic-${g.id}" class="p-2 ${idx < 4 ? 'border-r-2 border-pink-500' : ''}">
+                            <div class="relative w-full h-24 sm:h-28 rounded-xl overflow-hidden border border-slate-200 bg-slate-100">
+                                <div class="w-full h-full">
+                                    ${g.customImg
+                                        ? `<img src="${g.customImg}" alt="${g.name}" class="w-full h-full object-cover block" />`
+                                        : g.svg
+                                    }
+                                </div>
+                                <!-- أيقونة الكاميرا الصغيرة جداً + زر الصوت بعد الإجابة -->
+                                <div class="absolute top-1.5 right-1.5 z-10 flex items-center gap-1">
+                                    ${g.userChoice ? `
+                                        <button type="button" onclick="readEx1GirlStatus('${g.id}')" class="w-5 h-5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center text-[9px] shadow transition" title="استمع">
+                                            <i class="fa-solid fa-volume-high"></i>
+                                        </button>
+                                    ` : ''}
+                                    <label for="ex1-upload-${g.id}" class="cursor-pointer w-5 h-5 rounded-full bg-white/90 hover:bg-pink-50 text-pink-600 border border-pink-400 shadow-2xs flex items-center justify-center text-[9px] transition opacity-85 hover:opacity-100" title="إضافة أو تغيير صورة ${g.name}">
+                                        <i class="fa-solid fa-camera"></i>
+                                    </label>
+                                    <input type="file" id="ex1-upload-${g.id}" accept="image/*" class="hidden" onchange="handleEx1GirlImageUpload(event, '${g.id}')" />
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- صف Good day -->
+                <div class="grid grid-cols-6 text-center border-b-2 border-pink-500 items-center bg-white">
+                    <div class="py-3 px-2 border-r-2 border-pink-500 font-black text-pink-600 text-sm sm:text-lg text-left pl-3">
+                        Good day
+                        <span dir="rtl" class="block ar-font text-[11px] font-bold text-slate-500">يوم جيد 😊</span>
+                    </div>
+                    ${ex1Girls.map((g, idx) => {
+                        const isChecked = g.userChoice === 'good';
+                        const stateClass = isChecked ? (g.correctRow === 'good' ? 'checked-correct' : 'checked-wrong') : '';
+                        return `
+                            <div class="${idx < 4 ? 'border-r-2 border-pink-500' : ''}">
+                                <div id="ex1-cell-${g.id}-good"
+                                     onclick="handleEx1CellCheck('${g.id}', 'good')"
+                                     class="check-cell-btn ${stateClass}"
+                                     title="ضع علامة ✓ لـ ${g.name} (Good day)">
+                                    ${isChecked ? '✓' : ''}
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+
+                <!-- صف Bad day -->
+                <div class="grid grid-cols-6 text-center items-center bg-white">
+                    <div class="py-3 px-2 border-r-2 border-pink-500 font-black text-pink-600 text-sm sm:text-lg text-left pl-3">
+                        Bad day
+                        <span dir="rtl" class="block ar-font text-[11px] font-bold text-slate-500">يوم سيئ ☹️</span>
+                    </div>
+                    ${ex1Girls.map((g, idx) => {
+                        const isChecked = g.userChoice === 'bad';
+                        const stateClass = isChecked ? (g.correctRow === 'bad' ? 'checked-correct' : 'checked-wrong') : '';
+                        return `
+                            <div class="${idx < 4 ? 'border-r-2 border-pink-500' : ''}">
+                                <div id="ex1-cell-${g.id}-bad"
+                                     onclick="handleEx1CellCheck('${g.id}', 'bad')"
+                                     class="check-cell-btn ${stateClass}"
+                                     title="ضع علامة ✓ لـ ${g.name} (Bad day)">
+                                    ${isChecked ? '✓' : ''}
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+
+            const solvedCount = ex1Girls.filter(g => g.userChoice === g.correctRow).length;
+            const badge = document.getElementById('ex1ScoreBadge');
+            if (badge) badge.innerText = `النتيجة: ${solvedCount} / 5 ⭐`;
+            updateSaveButtonVisibility();
+        }
+
+        function handleEx1CellCheck(girlId, chosenRow) {
+            const girl = ex1Girls.find(g => g.id === girlId);
+            if (!girl) return;
+
+            girl.userChoice = chosenRow;
+            renderEx1Table();
+
+            if (chosenRow === girl.correctRow && typeof confetti === 'function') {
+                const allSolved = ex1Girls.every(g => g.userChoice === g.correctRow);
+                if (allSolved) {
+                    confetti({ particleCount: 75, spread: 70, origin: { y: 0.6 } });
+                } else {
+                    confetti({ particleCount: 25, spread: 45, origin: { y: 0.7 } });
+                }
+            }
+
+            // لا تُقرأ الجملة إلا بعد اختيار الإجابة مع تظليل ثابت جذاب
+            readEx1GirlStatus(girlId);
+        }
+
+        function readEx1GirlStatus(girlId) {
+            const girl = ex1Girls.find(g => g.id === girlId);
+            if (!girl || !girl.userChoice) return;
+
+            resetAllHighlights();
+            const picCol = document.getElementById(`ex1-col-pic-${girlId}`);
+            const cellEl = document.getElementById(`ex1-cell-${girlId}-${girl.userChoice}`);
+            if (picCol) picCol.classList.add('static-attractive-highlight');
+            if (cellEl) cellEl.classList.add('static-attractive-highlight');
+
+            const bar = document.getElementById('ex1TranslationBar');
+            if (bar) {
+                bar.innerText = girl.ar;
+                bar.className = "mt-4 ar-font text-lg sm:text-2xl font-black text-teal-950 bg-emerald-50 border-2 border-emerald-400 px-4 py-2.5 rounded-2xl text-center shadow-xs transition";
+            }
+
+            showToast(girl.spokenSentence);
+            const startTime = Date.now();
+            const minDuration = 1800;
+
+            speakSentenceWithLockedVoice(girl.spokenSentence, () => {
+                const elapsed = Date.now() - startTime;
+                const remaining = Math.max(0, minDuration - elapsed);
+                const endTimer = setTimeout(() => {
+                    if (picCol) picCol.classList.remove('static-attractive-highlight');
+                    if (cellEl) cellEl.classList.remove('static-attractive-highlight');
+                    hideToast();
+                }, remaining);
+                activeTimeouts.push(endTimer);
+            });
+        }
+
+        function revealEx1Answers() {
+            ex1Girls.forEach(g => { g.userChoice = g.correctRow; });
+            renderEx1Table();
+        }
+
+        function resetEx1Answers() {
+            resetAllHighlights();
+            ex1Girls.forEach(g => { g.userChoice = null; });
+            renderEx1Table();
+            const bar = document.getElementById('ex1TranslationBar');
+            if (bar) {
+                bar.innerText = "الترجمة: (ضع علامة ✓ أمام Good day أو Bad day لأي طالبة لسماع الجملة وظهور ترجمتها باللغة العربية هنا)";
+                bar.className = "mt-4 ar-font text-base sm:text-xl font-black text-slate-500 bg-slate-100 border-2 border-slate-200 px-4 py-2.5 rounded-2xl text-center transition";
+            }
+        }
+
+        // =====================================================================
+        // 2. دوال التمرين الثاني (Listen again and complete the notes: 1 to 8)
+        // =====================================================================
+        function shuffleEx2Bank() {
+            shuffleArray(ex2BankWords);
+            renderEx2WordBank();
+            showToast("تم خلط كلمات الملاحظات 🎲");
+            setTimeout(hideToast, 1200);
+        }
+
+        function renderEx2WordBank() {
+            const container = document.getElementById('ex2WordBankList');
+            if (!container) return;
+            const usedWords = Object.values(ex2UserAnswers);
+
+            container.innerHTML = ex2BankWords.map((word, idx) => {
+                const isSelected = selectedEx2Word === word;
+                const isUsed = usedWords.includes(word);
+                return `
+                    <button type="button"
+                        onclick="selectWordFromEx2Bank(${idx})"
+                        class="word-bank-chip px-4 py-1.5 rounded-xl border-2 font-black en-font text-base sm:text-lg shadow-2xs ${
+                            isSelected ? 'selected' : isUsed ? 'used bg-slate-100 border-slate-200 text-slate-400' : 'bg-white border-teal-300 text-teal-900'
+                        }">
+                        ${word}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function selectWordFromEx2Bank(idx) {
+            const word = ex2BankWords[idx];
+            if (!word) return;
+            const usedWords = Object.values(ex2UserAnswers);
+            if (usedWords.includes(word)) return;
+            selectedEx2Word = (selectedEx2Word === word) ? null : word;
+            renderEx2WordBank();
+        }
+
+        function renderEx2Notes() {
+            const container = document.getElementById('ex2NotesList');
+            if (!container) return;
+
+            container.innerHTML = ex2NotesData.map(item => {
+                const filled = ex2UserAnswers[item.id] || '';
+                const isAnswered = Boolean(filled);
+                const isCorrect = isAnswered && item.altAnswers.some(a => a.toLowerCase() === filled.toLowerCase());
+
+                return `
+                <div id="ex2-note-row-${item.id}" class="note-line-row flex flex-col gap-2 ${isCorrect ? 'solved' : ''}">
+                    <div class="flex items-center justify-between gap-2 flex-wrap">
+                        <div class="flex items-center flex-wrap gap-2 handwriting-font text-xl sm:text-2xl font-bold text-slate-800 leading-relaxed">
+                            <span class="w-7 h-7 rounded-full bg-pink-600 text-white en-font font-black text-sm flex items-center justify-center flex-shrink-0 shadow-2xs mr-1">
+                                ${item.id}
+                            </span>
+                            <span>${item.p1}</span>
+                            <span onclick="handleEx2BlankClick(${item.id})"
+                                  class="drop-target en-font ${isAnswered ? (isCorrect ? 'correct' : 'wrong') : ''}"
+                                  title="انقر لوضع الكلمة أو إزالتها">
+                                ${isAnswered ? filled : '<span class="text-slate-400 text-xs">................</span>'}
+                            </span>
+                            <span>${item.p2}</span>
+                        </div>
+
+                        ${isAnswered ? `
+                            <button type="button" onclick="readEx2AnsweredNote(${item.id})" class="w-8 h-8 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center text-xs shadow transition flex-shrink-0" title="استمع للجملة">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </button>
+                        ` : ''}
+                    </div>
+
+                    <!-- الترجمة باللغة العربية أسفل كل جملة مباشرة -->
+                    <div dir="rtl" class="ar-font text-xs sm:text-base font-extrabold ${isAnswered ? 'text-teal-900 bg-teal-50/90 border border-teal-200' : 'text-slate-400 bg-slate-50'} px-3.5 py-1.5 rounded-xl text-center">
+                        ${isAnswered ? item.ar : 'ضع الكلمة المناسبة في الفراغ لسماع الجملة وظهور الترجمة العربية'}
+                    </div>
+                </div>
+                `;
+            }).join('');
+
+            const solvedCount = ex2NotesData.filter(item => {
+                const v = ex2UserAnswers[item.id] || '';
+                return v && item.altAnswers.some(a => a.toLowerCase() === v.toLowerCase());
+            }).length;
+            const badge = document.getElementById('ex2ScoreBadge');
+            if (badge) badge.innerText = `النتيجة: ${solvedCount} / 8 ⭐`;
+        }
+
+        function handleEx2BlankClick(noteId) {
+            const item = ex2NotesData.find(n => n.id === noteId);
+            if (!item) return;
+
+            if (ex2UserAnswers[noteId] && !selectedEx2Word) {
+                delete ex2UserAnswers[noteId];
+                resetAllHighlights();
+                renderEx2WordBank();
+                renderEx2Notes();
+                return;
+            }
+
+            if (selectedEx2Word) {
+                ex2UserAnswers[noteId] = selectedEx2Word;
+                selectedEx2Word = null;
+                renderEx2WordBank();
+                renderEx2Notes();
+
+                const isCorrect = item.altAnswers.some(a => a.toLowerCase() === ex2UserAnswers[noteId].toLowerCase());
+                if (isCorrect && typeof confetti === 'function') {
+                    confetti({ particleCount: 30, spread: 50, origin: { y: 0.7 } });
+                }
+
+                // قراءة الجملة كاملةً بعد الإجابة فقط بالتظليل الثابت الجذاب
+                readEx2AnsweredNote(noteId);
+            } else {
+                showToast("اختر كلمة من الصندوق أولاً ثم اضغط على الفراغ!");
+                setTimeout(hideToast, 1800);
+            }
+        }
+
+        function readEx2AnsweredNote(noteId) {
+            const item = ex2NotesData.find(n => n.id === noteId);
+            const filled = ex2UserAnswers[noteId];
+            if (!item || !filled) {
+                showToast("أكمل الفراغ أولاً لتسمع الجملة!");
+                setTimeout(hideToast, 1800);
+                return;
+            }
+
+            resetAllHighlights();
+            const rowEl = document.getElementById(`ex2-note-row-${noteId}`);
+            if (rowEl) rowEl.classList.add('static-attractive-highlight');
+
+            const fullSentence = `${item.p1} ${filled}${item.p2.startsWith('.') ? item.p2 : ' ' + item.p2}`;
+            showToast(fullSentence);
+
+            const startTime = Date.now();
+            const minDuration = 1650;
+
+            speakSentenceWithLockedVoice(fullSentence, () => {
+                const elapsed = Date.now() - startTime;
+                const remaining = Math.max(0, minDuration - elapsed);
+                const endTimer = setTimeout(() => {
+                    if (rowEl) rowEl.classList.remove('static-attractive-highlight');
+                    hideToast();
+                }, remaining);
+                activeTimeouts.push(endTimer);
+            });
+        }
+
+        function revealEx2Answers() {
+            ex2NotesData.forEach(n => { ex2UserAnswers[n.id] = n.answer; });
+            selectedEx2Word = null;
+            renderEx2WordBank();
+            renderEx2Notes();
+        }
+
+        function resetEx2Answers() {
+            resetAllHighlights();
+            ex2UserAnswers = {};
+            selectedEx2Word = null;
+            renderEx2WordBank();
+            renderEx2Notes();
+        }
+
+        // =====================================================================
+        // 3. دوال التمرين الثالث (Answer the questions about your day: 1 & 2)
+        // =====================================================================
+        const ex3ExactTranslations = {
+            "my day at school was great yesterday!": "كان يومي في المدرسة رائعاً أمس!",
+            "it was a very good day!": "لقد كان يوماً جيداً جداً!",
+            "my day was good fun.": "كان يومي ممتعاً وجميلاً.",
+            "we did our projects, and the teacher liked my homework.": "قمنا بعمل مشاريعنا، وأعجب المعلم بواجبي المنزلي.",
+            "we read a funny story and laughed a lot in class.": "قرأنا قصة مضحكة وضحكنا كثيراً في الفصل.",
+            "i helped my teacher carry the books into the classroom.": "ساعدت معلمي في حمل الكتب إلى داخل الفصل."
+        };
+
+        function translateEx3Sentence(text, qNum) {
+            if (!text || !text.trim()) return "";
+            const norm = text.trim().toLowerCase().replace(/\s+/g, ' ');
+            if (ex3ExactTranslations[norm]) return ex3ExactTranslations[norm];
+
+            if (qNum === 1) {
+                if (norm.includes("bad")) return "كان يومي في المدرسة متعباً أمس.";
+                return "كان يومي في المدرسة جيداً وممتعاً أمس!";
+            }
+            if (norm.includes("project") || norm.includes("homework")) return "قمنا بعمل مشاريعنا وأعجب المعلم بواجبنا.";
+            if (norm.includes("story") || norm.includes("laugh")) return "قرأنا قصة جميلة وضحكنا في الفصل.";
+            if (norm.includes("book") || norm.includes("carry")) return "ساعدت المعلم في حمل الكتب إلى الفصل.";
+
+            return "حدثت أنشطة جميلة ومفيدة في فصلنا أمس.";
+        }
+
+        function updateEx3Translation(qNum) {
+            const inputEl = document.getElementById(`ex3-input-${qNum}`);
+            const arBox = document.getElementById(`ex3-ar-${qNum}`);
+            if (!inputEl || !arBox) return;
+
+            const rawVal = inputEl.value.trim();
+            if (!rawVal) {
+                arBox.innerText = "الترجمة: (اختر من الأزرار أعلاه أو اكتب جملتك لتظهر ترجمتها باللغة العربية هنا)";
+                arBox.className = "w-full ar-font text-base sm:text-xl font-black text-slate-500 bg-slate-100 border-2 border-slate-200 px-5 py-2.5 rounded-2xl mt-3 text-center transition";
+                return;
+            }
+
+            arBox.innerText = translateEx3Sentence(rawVal, qNum);
+            arBox.className = qNum === 1
+                ? "w-full ar-font text-lg sm:text-2xl font-black text-teal-900 bg-emerald-50 border-2 border-emerald-300 px-5 py-2.5 rounded-2xl mt-3 text-center shadow-xs transition"
+                : "w-full ar-font text-lg sm:text-2xl font-black text-rose-900 bg-rose-50 border-2 border-rose-300 px-5 py-2.5 rounded-2xl mt-3 text-center shadow-xs transition";
+        }
+
+        function setEx3SingleSentence(qNum, sentenceText) {
+            const inputEl = document.getElementById(`ex3-input-${qNum}`);
+            if (!inputEl) return;
+
+            // كتابة جملة واحدة فقط داخل الإطار
+            inputEl.value = sentenceText;
+            updateEx3Translation(qNum);
+            speakEx3Answer(qNum);
+        }
+
+        function speakEx3Answer(qNum) {
+            const inputEl = document.getElementById(`ex3-input-${qNum}`);
+            const boxEl = document.getElementById(`ex3-q${qNum}-box`);
+            if (!inputEl) return;
+
+            const textVal = inputEl.value.trim();
+            if (!textVal) {
+                showToast("اختر من الأزرار المقترحة أو اكتب جملتك أولاً لسماع النطق!");
+                setTimeout(hideToast, 1900);
+                return;
+            }
+
+            resetAllHighlights();
+            if (boxEl) boxEl.classList.add('static-attractive-highlight');
+            showToast(textVal);
+
+            const startTime = Date.now();
+            const minDuration = 1750;
+
+            speakSentenceWithLockedVoice(textVal, () => {
+                const elapsed = Date.now() - startTime;
+                const remaining = Math.max(0, minDuration - elapsed);
+                const endTimer = setTimeout(() => {
+                    if (boxEl) boxEl.classList.remove('static-attractive-highlight');
+                    hideToast();
+                }, remaining);
+                activeTimeouts.push(endTimer);
+            });
+        }
+
+        function fillSampleEx3Answers() {
+            const in1 = document.getElementById('ex3-input-1');
+            const in2 = document.getElementById('ex3-input-2');
+            if (in1) in1.value = "My day at school was great yesterday!";
+            if (in2) in2.value = "We did our projects, and the teacher liked my homework.";
+            updateEx3Translation(1);
+            updateEx3Translation(2);
+        }
+
+        function resetEx3Answers() {
+            resetAllHighlights();
+            const in1 = document.getElementById('ex3-input-1');
+            const in2 = document.getElementById('ex3-input-2');
+            if (in1) in1.value = "";
+            if (in2) in2.value = "";
+            updateEx3Translation(1);
+            updateEx3Translation(2);
+        }
+
+        function toggleAllPageAnswers() {
+            showingAllAnswers = !showingAllAnswers;
+            const btn = document.getElementById('showAllAnswersBtn');
+
+            if (showingAllAnswers) {
+                revealEx1Answers();
+                revealEx2Answers();
+                fillSampleEx3Answers();
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-eye-slash"></i><span>إخفاء الحلول</span>';
+                    btn.classList.replace('bg-amber-500', 'bg-slate-700');
+                    btn.classList.replace('hover:bg-amber-600', 'hover:bg-slate-800');
+                }
+            } else {
+                resetEx1Answers();
+                resetEx2Answers();
+                resetEx3Answers();
+                if (btn) {
+                    btn.innerHTML = '<i class="fa-solid fa-key"></i><span>إظهار جميع الحلول</span>';
+                    btn.classList.replace('bg-slate-700', 'bg-amber-500');
+                    btn.classList.replace('hover:bg-slate-800', 'hover:bg-amber-600');
+                }
+            }
+        }
+
+        // =====================================================================
+        // 4. رفع وحفظ الصور والمقاطع الصوتية (IndexedDB + LocalStorage + HTML)
+        // =====================================================================
+        function openMediaDB() {
+            return new Promise((resolve) => {
+                if (!('indexedDB' in window)) {
+                    resolve(null);
+                    return;
+                }
+                const req = indexedDB.open(IDB_NAME, 1);
+                req.onupgradeneeded = (e) => {
+                    const db = e.target.result;
+                    if (!db.objectStoreNames.contains(IDB_STORE)) {
+                        db.createObjectStore(IDB_STORE);
+                    }
+                };
+                req.onsuccess = (e) => resolve(e.target.result);
+                req.onerror = () => resolve(null);
+            });
+        }
+
+        async function idbSetItem(key, val) {
+            try {
+                const db = await openMediaDB();
+                if (!db) return;
+                return new Promise((resolve) => {
+                    const tx = db.transaction(IDB_STORE, 'readwrite');
+                    tx.objectStore(IDB_STORE).put(val, key);
+                    tx.oncomplete = () => resolve(true);
+                    tx.onerror = () => resolve(false);
+                });
+            } catch (e) {}
+        }
+
+        async function idbGetItem(key) {
+            try {
+                const db = await openMediaDB();
+                if (!db) return null;
+                return new Promise((resolve) => {
+                    const tx = db.transaction(IDB_STORE, 'readonly');
+                    const req = tx.objectStore(IDB_STORE).get(key);
+                    req.onsuccess = () => resolve(req.result || null);
+                    req.onerror = () => resolve(null);
+                });
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function handleEx1GirlImageUpload(event, girlId) {
+            const file = event.target.files && event.target.files[0];
+            if (!file || !file.type.startsWith('image/')) return;
+
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const MAX_W = 500;
+                    let w = img.width;
+                    let h = img.height;
+                    if (w > MAX_W) {
+                        h = Math.round((h * MAX_W) / w);
+                        w = MAX_W;
+                    }
+                    canvas.width = w;
+                    canvas.height = h;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, w, h);
+                    const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+
+                    const girl = ex1Girls.find(g => g.id === girlId);
+                    if (girl) {
+                        girl.customImg = dataUrl;
+                        saveAllMediaToStorage();
+                        renderEx1Table();
+                        showToast(`تم حفظ صورة (${girl.name}) بنجاح ✓`);
+                        setTimeout(hideToast, 1800);
+                    }
+                };
+                img.src = evt.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function handleAudioUpload(event, sectionKey) {
+            const file = event.target.files && event.target.files[0];
+            if (!file || !file.type.startsWith('audio/')) return;
+
+            const reader = new FileReader();
+            reader.onload = async function(evt) {
+                customAudios[sectionKey] = evt.target.result;
+                applyAudioUI(sectionKey, customAudios[sectionKey], true);
+                await saveAllMediaToStorage();
+                updateSaveButtonVisibility();
+                showToast("يعمل المقطع الصوتي الآن تلقائياً 🎵🔊");
+                setTimeout(hideToast, 2200);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function applyAudioUI(sectionKey, audioUrl, autoPlay = true) {
+            const box = document.getElementById(`custom-audio-box-${sectionKey}`);
+            const player = document.getElementById(`custom-audio-player-${sectionKey}`);
+            if (!box || !player) return;
+
+            if (audioUrl) {
+                player.src = audioUrl;
+                box.classList.remove('hidden');
+                box.classList.add('flex');
+                if (autoPlay) {
+                    player.play().catch(() => {});
+                }
+            } else {
+                player.pause();
+                player.removeAttribute('src');
+                box.classList.add('hidden');
+                box.classList.remove('flex');
+            }
+        }
+
+        async function removeCustomAudio(sectionKey) {
+            customAudios[sectionKey] = null;
+            applyAudioUI(sectionKey, null, false);
+            await saveAllMediaToStorage();
+            updateSaveButtonVisibility();
+        }
+
+        function buildMediaPayload() {
+            const pics = {};
+            ex1Girls.forEach(g => {
+                if (g.customImg) pics[g.id] = g.customImg;
+            });
+            return {
+                pics,
+                audios: customAudios
+            };
+        }
+
+        async function saveAllMediaToStorage() {
+            const payload = buildMediaPayload();
+            await idbSetItem(STORAGE_KEY_P153_MEDIA, payload);
+            try {
+                localStorage.setItem(STORAGE_KEY_P153_MEDIA, JSON.stringify(payload));
+            } catch (e) {}
+        }
+
+        async function loadAllMediaFromStorage() {
+            let payload = window.__EMBEDDED_P153_MEDIA__ || null;
+            if (!payload) {
+                try {
+                    payload = await idbGetItem(STORAGE_KEY_P153_MEDIA);
+                    if (!payload) {
+                        const raw = localStorage.getItem(STORAGE_KEY_P153_MEDIA);
+                        if (raw) payload = JSON.parse(raw);
+                    }
+                } catch (e) {}
+            }
+            if (!payload) return;
+
+            if (payload.pics) {
+                ex1Girls.forEach(g => {
+                    if (payload.pics[g.id]) g.customImg = payload.pics[g.id];
+                });
+            }
+            if (payload.audios) {
+                if (payload.audios.ex1) {
+                    customAudios.ex1 = payload.audios.ex1;
+                    applyAudioUI('ex1', customAudios.ex1, true);
+                }
+                if (payload.audios.ex2) {
+                    customAudios.ex2 = payload.audios.ex2;
+                    applyAudioUI('ex2', customAudios.ex2, false);
+                }
+            }
+        }
+        window.loadAllMediaFromStorage = loadAllMediaFromStorage;
+
+        function updateSaveButtonVisibility() {
+            const btn = document.getElementById('saveHtmlWithMediaBtn');
+            if (!btn) return;
+            const hasPics = ex1Girls.some(g => Boolean(g.customImg));
+            if (hasPics || customAudios.ex1 || customAudios.ex2) btn.classList.remove('hidden');
+            else btn.classList.add('hidden');
+        }
+
+        function downloadPageWithSavedMedia() {
+            const cloneDoc = document.documentElement.cloneNode(true);
+            const scriptEl = document.createElement('script');
+            const payload = buildMediaPayload();
+            scriptEl.textContent = `window.__EMBEDDED_P153_MEDIA__ = ${JSON.stringify(payload)};`;
+            const head = cloneDoc.querySelector('head');
+            if (head) head.appendChild(scriptEl);
+
+            const htmlContent = '<!DOCTYPE html>\n' + cloneDoc.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Unit3_Page153_Listening_Speaking_Saved.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // =====================================================================
+        // 5. محرك الصوت التعليمي الهادئ (صوت واحد أمريكي ثابت دائماً)
+        // =====================================================================
+        function findBestRoutineVoice(voicesList) {
+            if (!voicesList || voicesList.length === 0) return null;
+
+            const cleanEnVoices = voicesList.filter(v => {
+                if (!v.lang || !v.lang.toLowerCase().startsWith('en')) return false;
+                const lowerName = v.name.toLowerCase();
+                return !EXCLUDED_VOICE_KEYWORDS.some(bad => lowerName.includes(bad));
+            });
+
+            const usVoices = cleanEnVoices.filter(v =>
+                v.lang && (v.lang.toLowerCase() === 'en-us' || v.lang.toLowerCase().startsWith('en_us'))
+            );
+
+            const list = usVoices.length > 0
+                ? usVoices
+                : (cleanEnVoices.length > 0 ? cleanEnVoices : voicesList.filter(v => v.lang && v.lang.toLowerCase().startsWith('en')));
+
+            const priorityNames = [
+                'ava online (natural)',
+                'emma online (natural)',
+                'jenny online (natural)',
+                'aria online (natural)',
+                'michelle online (natural)',
+                'ana online (natural)',
+                'google us english',
+                'samantha (enhanced)',
+                'ava (enhanced)',
+                'allison (enhanced)',
+                'samantha',
+                'ava',
+                'allison'
+            ];
+
+            for (const keyword of priorityNames) {
+                const match = list.find(v => v.name.toLowerCase().includes(keyword));
+                if (match) return match;
+            }
+
+            return list[0] || null;
+        }
+
+        function populateVoiceList() {
+            if (!('speechSynthesis' in window)) return;
+            const voices = window.speechSynthesis.getVoices();
+            if (!voices || voices.length === 0) return;
+
+            if (lockedNativeVoice) {
+                const sameVoice = voices.find(v => v.voiceURI === lockedNativeVoice.voiceURI || v.name === lockedNativeVoice.name);
+                if (sameVoice) {
+                    lockedNativeVoice = sameVoice;
+                    return;
+                }
+            }
+
+            const best = findBestRoutineVoice(voices);
+            if (best) {
+                lockedNativeVoice = best;
+                const cleanName = best.name.replace(/Google|Microsoft|Apple|Desktop|English|United States|United Kingdom|Canada|\(\)/gi, '').trim() || 'Calm Teacher';
+                const footerBadge = document.getElementById('footerSpeakerName');
+                const toastLabel = document.getElementById('toastSpeakerLabel');
+                if (footerBadge) footerBadge.innerText = `Voice: ${cleanName}`;
+                if (toastLabel) toastLabel.innerText = `Reading calmly (${cleanName}):`;
+            }
+        }
+
+        function formatCalmEducationalText(rawText) {
+            if (!rawText) return '';
+            let clean = String(rawText).replace(/’/g, "'").trim();
+            if (!clean.includes(' ') && !/[.?!]$/.test(clean)) {
+                clean = clean.charAt(0).toUpperCase() + clean.slice(1) + '.';
+            }
+            return clean;
+        }
+
+        function speakSentenceWithLockedVoice(text, onFinished) {
+            currentSpeechSessionId++;
+            const sessionId = currentSpeechSessionId;
+
+            if (!('speechSynthesis' in window)) {
+                if (onFinished) onFinished();
+                return;
+            }
+
+            try {
+                window.speechSynthesis.cancel();
+            } catch (e) {}
+
+            const delayMs = 90;
+
+            const startTimer = setTimeout(() => {
+                if (sessionId !== currentSpeechSessionId) return;
+
+                if (!lockedNativeVoice) {
+                    populateVoiceList();
+                }
+
+                const voices = window.speechSynthesis.getVoices();
+                const voiceToUse = (lockedNativeVoice && voices.find(v => v.voiceURI === lockedNativeVoice.voiceURI || v.name === lockedNativeVoice.name))
+                    || lockedNativeVoice
+                    || findBestRoutineVoice(voices);
+
+                if (voiceToUse && !lockedNativeVoice) {
+                    lockedNativeVoice = voiceToUse;
+                }
+
+                const rawClean = String(text || '').trim();
+                const isSingleWord = !rawClean.includes(' ');
+                const preparedText = formatCalmEducationalText(rawClean);
+
+                const utterance = new SpeechSynthesisUtterance(preparedText);
+                window.activeUtteranceRef = utterance;
+                utteranceGcKeeper.push(utterance);
+                if (utteranceGcKeeper.length > 15) utteranceGcKeeper.shift();
+
+                if (voiceToUse) {
+                    utterance.voice = voiceToUse;
+                    utterance.lang = voiceToUse.lang || 'en-US';
+                } else {
+                    utterance.lang = 'en-US';
+                }
+
+                utterance.rate = isSingleWord ? Math.max(currentSpeechRate, 0.86) : currentSpeechRate;
+                utterance.pitch = 1.0;
+                utterance.volume = 1.0;
+
+                let finished = false;
+                const done = () => {
+                    if (finished || sessionId !== currentSpeechSessionId) return;
+                    finished = true;
+                    if (onFinished) onFinished();
+                };
+
+                utterance.onend = done;
+                utterance.onerror = done;
+
+                if (window.speechSynthesis.paused) {
+                    try {
+                        window.speechSynthesis.resume();
+                    } catch (e) {}
+                }
+                window.speechSynthesis.speak(utterance);
+            }, delayMs);
+
+            activeTimeouts.push(startTimer);
+        }
+
+        function resetAllHighlights() {
+            currentSpeechSessionId++;
+            activeTimeouts.forEach(t => clearTimeout(t));
+            activeTimeouts = [];
+
+            if ('speechSynthesis' in window && (window.speechSynthesis.speaking || window.speechSynthesis.pending)) {
+                try {
+                    window.speechSynthesis.cancel();
+                } catch (e) {}
+            }
+            if (currentAudioPlayer) {
+                currentAudioPlayer.pause();
+                currentAudioPlayer = null;
+            }
+
+            document.querySelectorAll('.static-attractive-highlight').forEach(el => {
+                el.classList.remove('static-attractive-highlight');
+            });
+            hideToast();
+        }
+
+        function toggleSpeechRate() {
+            const display = document.getElementById('speedDisplay');
+            if (currentSpeechRate === 0.78) {
+                currentSpeechRate = 0.70;
+                if (display) display.innerText = 'بطيء ومفصل (0.70x)';
+            } else if (currentSpeechRate === 0.70) {
+                currentSpeechRate = 0.86;
+                if (display) display.innerText = 'طبيعي معتدل (0.86x)';
+            } else {
+                currentSpeechRate = 0.78;
+                if (display) display.innerText = 'هادئ وتعليمي (0.78x)';
+            }
+        }
+
+        function showToast(text) {
+            const toast = document.getElementById('liveReadingToast');
+            const toastText = document.getElementById('toastWord');
+            if (toastText) toastText.innerText = text;
+            if (toast) {
+                toast.classList.remove('opacity-0', 'translate-y-8');
+                toast.classList.add('opacity-100', 'translate-y-0');
+            }
+        }
+
+        function hideToast() {
+            const toast = document.getElementById('liveReadingToast');
+            if (toast) {
+                toast.classList.add('opacity-0', 'translate-y-8');
+                toast.classList.remove('opacity-100', 'translate-y-0');
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', async function() {
+            shuffleArray(ex2BankWords);
+            if (typeof loadAllMediaFromStorage === 'function') {
+                await loadAllMediaFromStorage();
+            }
+            renderEx1Table();
+            renderEx2WordBank();
+            renderEx2Notes();
+            updateEx3Translation(1);
+            updateEx3Translation(2);
+            populateVoiceList();
+
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.onvoiceschanged = () => {
+                    populateVoiceList();
+                };
+            }
+        });
+    </script>
+</body>
+</html>
